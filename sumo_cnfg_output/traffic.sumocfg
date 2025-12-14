@@ -1,0 +1,31 @@
+<configuration>
+
+    <input>
+        <!-- your intersection network -->
+        <net-file value="version.net.xml"/>
+
+        <!-- routes generated from trajectories.csv -->
+        <route-files value="routes.xml"/>
+
+        <!-- vehicle type definitions -->
+        <additional-files value="vehicle_types.xml"/>
+    </input>
+
+    <time>
+        <!-- simulation start & end -->
+        <begin value="0"/>
+        <end value="2000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <!-- allows SUMO to continue even if a few vehicles have tiny issues -->
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <report>
+        <no-step-log value="true"/>
+        <verbose value="false"/>
+    </report>
+
+</configuration>
