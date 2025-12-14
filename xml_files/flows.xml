@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<routes><flow id="flow_E_left_turn" begin="0" end="60" number="44" route="E SS" /><flow id="flow_E_right_turn" begin="0" end="60" number="23" route="E WW" /><flow id="flow_E_through" begin="0" end="60" number="86" route="E EE" /><flow id="flow_N_right_turn" begin="0" end="60" number="5" route="N SS" /><flow id="flow_W_left_turn" begin="0" end="60" number="32" route="W SS" /><flow id="flow_W_right_turn" begin="0" end="60" number="26" route="W NN" /><flow id="flow_W_through" begin="0" end="60" number="87" route="W WW" /></routes>
