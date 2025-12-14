@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# TF / PyTorch weights
+*.pt
+*.pth
+
+# Output files
+output/
+*.log
+*.sumo.trc
+
+# Data
+data_raw/*.mp4
+data_raw/*.avi
+data_raw/*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
