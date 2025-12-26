@@ -21,11 +21,10 @@ docs/               diagrams and documentation
 \\\
 
 ## How to Run
-\\\
+
 pip install -r requirements.txt
 
 sumo-gui -c sumo_configs/configs/main.sumocfg
-\\\
 
 ## Features
 - Real-to-SUMO coordinate mapping
