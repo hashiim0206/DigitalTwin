@@ -23,6 +23,7 @@ docs/               diagrams and documentation
 ## How to Run
 \\\
 pip install -r requirements.txt
+
 sumo-gui -c sumo_configs/configs/main.sumocfg
 \\\
 
@@ -32,5 +33,3 @@ sumo-gui -c sumo_configs/configs/main.sumocfg
 - Automated SUMO simulation
 - RMSE + timing drift evaluation
 
-## License
-MIT (or your choice)
