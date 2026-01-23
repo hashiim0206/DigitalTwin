@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Generated outputs
+outputs/calibrated.rou.xml
+outputs/traffic_data.json
+outputs/sumo_state.json
+outputs/tripinfo.xml
+outputs/dashboard/*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# SUMO temporary files
+*.log
+*.sumocfg~
