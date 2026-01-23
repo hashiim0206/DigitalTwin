@@ -154,12 +154,12 @@ All figures are 300 DPI, publication-ready PNG format.
 - Ensure `SUMO_HOME` environment variable is set
 - Verify SUMO is installed correctly
 
-**Missing dependencies:**
+**Installing dependencies:**
 ```bash
 pip install ultralytics opencv-python numpy pandas matplotlib seaborn scipy
 ```
 
-**No video file:**
+**Video file:**
 - Place your drone video as `data/input.mp4`
 - Or modify the path in `traffic_master.py`
 
