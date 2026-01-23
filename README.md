@@ -163,3 +163,13 @@ pip install ultralytics opencv-python numpy pandas matplotlib seaborn scipy
 - Place your drone video as `data/input.mp4`
 - Or modify the path in `traffic_master.py`
 
+## Future Work
+
+- Real-time video processing for live traffic monitoring
+- Multi-sensor fusion combining cameras, LiDAR, and loop detectors
+- Automated signal phase detection using computer vision
+- Extend to corridor-level with multiple coordinated intersections
+- Transfer learning to deploy models across different intersection sites
+- Machine learning for short-term traffic prediction
+- Reinforcement learning for adaptive signal control
+
