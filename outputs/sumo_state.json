@@ -1,0 +1,1676 @@
+[
+    {
+        "id": 1,
+        "origin": "SOUTH",
+        "dest": "WEST",
+        "depart": 0.0
+    },
+    {
+        "id": 2,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 0.0
+    },
+    {
+        "id": 3,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 4,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 0.0
+    },
+    {
+        "id": 5,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 0.0
+    },
+    {
+        "id": 6,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 7,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 0.0
+    },
+    {
+        "id": 8,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 9,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 10,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 0.0
+    },
+    {
+        "id": 11,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 12,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 13,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 14,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 16,
+        "origin": "SOUTH",
+        "dest": "WEST",
+        "depart": 0.0
+    },
+    {
+        "id": 17,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 18,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 0.0
+    },
+    {
+        "id": 20,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 0.0
+    },
+    {
+        "id": 21,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 0.0
+    },
+    {
+        "id": 22,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 0.0
+    },
+    {
+        "id": 23,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 0.0
+    },
+    {
+        "id": 27,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 0.1
+    },
+    {
+        "id": 28,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 0.1
+    },
+    {
+        "id": 67,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 0.23
+    },
+    {
+        "id": 74,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 0.23
+    },
+    {
+        "id": 75,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 0.25
+    },
+    {
+        "id": 88,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 0.3
+    },
+    {
+        "id": 152,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 0.52
+    },
+    {
+        "id": 184,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 0.67
+    },
+    {
+        "id": 203,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 0.77
+    },
+    {
+        "id": 205,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 0.77
+    },
+    {
+        "id": 252,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 1.03
+    },
+    {
+        "id": 267,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 1.17
+    },
+    {
+        "id": 276,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 1.23
+    },
+    {
+        "id": 278,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 1.23
+    },
+    {
+        "id": 282,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 1.3
+    },
+    {
+        "id": 327,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 1.65
+    },
+    {
+        "id": 342,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 1.83
+    },
+    {
+        "id": 348,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 1.9
+    },
+    {
+        "id": 351,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 2.03
+    },
+    {
+        "id": 377,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 2.23
+    },
+    {
+        "id": 378,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 2.23
+    },
+    {
+        "id": 392,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 2.3
+    },
+    {
+        "id": 437,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 2.52
+    },
+    {
+        "id": 454,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 2.83
+    },
+    {
+        "id": 455,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 2.83
+    },
+    {
+        "id": 482,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 3.57
+    },
+    {
+        "id": 491,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 3.77
+    },
+    {
+        "id": 501,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 3.97
+    },
+    {
+        "id": 527,
+        "origin": "SOUTH",
+        "dest": "WEST",
+        "depart": 4.1
+    },
+    {
+        "id": 537,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 4.17
+    },
+    {
+        "id": 549,
+        "origin": "SOUTH",
+        "dest": "EAST",
+        "depart": 4.23
+    },
+    {
+        "id": 576,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 4.5
+    },
+    {
+        "id": 584,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 4.53
+    },
+    {
+        "id": 606,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 4.77
+    },
+    {
+        "id": 696,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 5.38
+    },
+    {
+        "id": 715,
+        "origin": "SOUTH",
+        "dest": "WEST",
+        "depart": 5.43
+    },
+    {
+        "id": 720,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 5.45
+    },
+    {
+        "id": 721,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 5.45
+    },
+    {
+        "id": 789,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 5.85
+    },
+    {
+        "id": 802,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 5.98
+    },
+    {
+        "id": 803,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 5.98
+    },
+    {
+        "id": 808,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 6.0
+    },
+    {
+        "id": 895,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 6.45
+    },
+    {
+        "id": 906,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 6.52
+    },
+    {
+        "id": 931,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 6.65
+    },
+    {
+        "id": 932,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 6.65
+    },
+    {
+        "id": 941,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 6.72
+    },
+    {
+        "id": 952,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 6.78
+    },
+    {
+        "id": 999,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 7.12
+    },
+    {
+        "id": 1033,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 7.32
+    },
+    {
+        "id": 1056,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 7.52
+    },
+    {
+        "id": 1077,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 7.63
+    },
+    {
+        "id": 1108,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 7.78
+    },
+    {
+        "id": 1125,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 7.92
+    },
+    {
+        "id": 1142,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 8.18
+    },
+    {
+        "id": 1144,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 8.25
+    },
+    {
+        "id": 1152,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 8.45
+    },
+    {
+        "id": 1180,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 8.63
+    },
+    {
+        "id": 1181,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 8.65
+    },
+    {
+        "id": 1183,
+        "origin": "NORTH",
+        "dest": "WEST",
+        "depart": 8.65
+    },
+    {
+        "id": 1209,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 9.05
+    },
+    {
+        "id": 1210,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 9.05
+    },
+    {
+        "id": 1250,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 9.25
+    },
+    {
+        "id": 1312,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 9.65
+    },
+    {
+        "id": 1320,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 9.72
+    },
+    {
+        "id": 1324,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 9.73
+    },
+    {
+        "id": 1338,
+        "origin": "NORTH",
+        "dest": "WEST",
+        "depart": 9.92
+    },
+    {
+        "id": 1339,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 9.92
+    },
+    {
+        "id": 1366,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 10.08
+    },
+    {
+        "id": 1373,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 10.12
+    },
+    {
+        "id": 1389,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 10.32
+    },
+    {
+        "id": 1397,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 10.38
+    },
+    {
+        "id": 1406,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 10.45
+    },
+    {
+        "id": 1408,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 10.45
+    },
+    {
+        "id": 1414,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 10.52
+    },
+    {
+        "id": 1424,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 10.58
+    },
+    {
+        "id": 1481,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 10.92
+    },
+    {
+        "id": 1490,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 10.97
+    },
+    {
+        "id": 1493,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 10.98
+    },
+    {
+        "id": 1507,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 11.38
+    },
+    {
+        "id": 1542,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 11.85
+    },
+    {
+        "id": 1546,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 11.87
+    },
+    {
+        "id": 1557,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 11.98
+    },
+    {
+        "id": 1558,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 11.98
+    },
+    {
+        "id": 1628,
+        "origin": "SOUTH",
+        "dest": "EAST",
+        "depart": 12.67
+    },
+    {
+        "id": 1649,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 12.83
+    },
+    {
+        "id": 1650,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 12.85
+    },
+    {
+        "id": 1664,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 12.98
+    },
+    {
+        "id": 1665,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 12.98
+    },
+    {
+        "id": 1678,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 13.05
+    },
+    {
+        "id": 1751,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 13.72
+    },
+    {
+        "id": 1784,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 13.95
+    },
+    {
+        "id": 1837,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 14.32
+    },
+    {
+        "id": 1856,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 14.58
+    },
+    {
+        "id": 1904,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 14.98
+    },
+    {
+        "id": 1907,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 15.0
+    },
+    {
+        "id": 1908,
+        "origin": "SOUTH",
+        "dest": "EAST",
+        "depart": 15.0
+    },
+    {
+        "id": 1910,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 15.02
+    },
+    {
+        "id": 1912,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 15.03
+    },
+    {
+        "id": 1913,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 15.12
+    },
+    {
+        "id": 1914,
+        "origin": "NORTH",
+        "dest": "WEST",
+        "depart": 15.12
+    },
+    {
+        "id": 2064,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 16.92
+    },
+    {
+        "id": 2072,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 16.98
+    },
+    {
+        "id": 2129,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 17.52
+    },
+    {
+        "id": 2155,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 17.72
+    },
+    {
+        "id": 2200,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 18.05
+    },
+    {
+        "id": 2221,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 18.25
+    },
+    {
+        "id": 2290,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 18.85
+    },
+    {
+        "id": 2319,
+        "origin": "NORTH",
+        "dest": "WEST",
+        "depart": 18.98
+    },
+    {
+        "id": 2326,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 19.05
+    },
+    {
+        "id": 2333,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 19.07
+    },
+    {
+        "id": 2358,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 19.32
+    },
+    {
+        "id": 2507,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 20.05
+    },
+    {
+        "id": 2508,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 20.05
+    },
+    {
+        "id": 2513,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 20.1
+    },
+    {
+        "id": 2514,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 20.12
+    },
+    {
+        "id": 2515,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 20.12
+    },
+    {
+        "id": 2528,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 20.25
+    },
+    {
+        "id": 2585,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 20.97
+    },
+    {
+        "id": 2624,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 21.37
+    },
+    {
+        "id": 2636,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 21.58
+    },
+    {
+        "id": 2637,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 21.58
+    },
+    {
+        "id": 2638,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 21.65
+    },
+    {
+        "id": 2678,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 22.2
+    },
+    {
+        "id": 2679,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 22.2
+    },
+    {
+        "id": 2835,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 23.33
+    },
+    {
+        "id": 2890,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 23.47
+    },
+    {
+        "id": 2918,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 23.53
+    },
+    {
+        "id": 2919,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 23.53
+    },
+    {
+        "id": 3018,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 24.33
+    },
+    {
+        "id": 3068,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 24.82
+    },
+    {
+        "id": 3082,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 24.93
+    },
+    {
+        "id": 3086,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 24.98
+    },
+    {
+        "id": 3091,
+        "origin": "SOUTH",
+        "dest": "EAST",
+        "depart": 25.13
+    },
+    {
+        "id": 3106,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 25.4
+    },
+    {
+        "id": 3125,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 25.75
+    },
+    {
+        "id": 3138,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 25.9
+    },
+    {
+        "id": 3143,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 26.0
+    },
+    {
+        "id": 3155,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 26.2
+    },
+    {
+        "id": 3166,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 26.67
+    },
+    {
+        "id": 3173,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 26.87
+    },
+    {
+        "id": 3183,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 27.0
+    },
+    {
+        "id": 3190,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 27.07
+    },
+    {
+        "id": 3226,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 27.6
+    },
+    {
+        "id": 3235,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 27.73
+    },
+    {
+        "id": 3241,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 27.82
+    },
+    {
+        "id": 3259,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 28.0
+    },
+    {
+        "id": 3260,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 28.0
+    },
+    {
+        "id": 3266,
+        "origin": "SOUTH",
+        "dest": "WEST",
+        "depart": 28.13
+    },
+    {
+        "id": 3323,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 28.93
+    },
+    {
+        "id": 3336,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 29.07
+    },
+    {
+        "id": 3350,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 29.2
+    },
+    {
+        "id": 3370,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 29.4
+    },
+    {
+        "id": 3371,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 29.4
+    },
+    {
+        "id": 3374,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 29.47
+    },
+    {
+        "id": 3382,
+        "origin": "SOUTH",
+        "dest": "WEST",
+        "depart": 29.53
+    },
+    {
+        "id": 3392,
+        "origin": "NORTH",
+        "dest": "EAST",
+        "depart": 29.6
+    },
+    {
+        "id": 3415,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 29.73
+    },
+    {
+        "id": 3427,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 30.0
+    },
+    {
+        "id": 3472,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 30.4
+    },
+    {
+        "id": 3480,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 30.45
+    },
+    {
+        "id": 3495,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 30.67
+    },
+    {
+        "id": 3515,
+        "origin": "SOUTH",
+        "dest": "WEST",
+        "depart": 30.8
+    },
+    {
+        "id": 3529,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 31.18
+    },
+    {
+        "id": 3530,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 31.2
+    },
+    {
+        "id": 3531,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 31.2
+    },
+    {
+        "id": 3555,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 31.42
+    },
+    {
+        "id": 3559,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 31.47
+    },
+    {
+        "id": 3562,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 31.53
+    },
+    {
+        "id": 3592,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 31.8
+    },
+    {
+        "id": 3598,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 31.87
+    },
+    {
+        "id": 3605,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 32.0
+    },
+    {
+        "id": 3617,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 32.12
+    },
+    {
+        "id": 3637,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 32.73
+    },
+    {
+        "id": 3641,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 32.8
+    },
+    {
+        "id": 3656,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 33.0
+    },
+    {
+        "id": 3657,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 33.0
+    },
+    {
+        "id": 3660,
+        "origin": "EAST",
+        "dest": "SOUTH",
+        "depart": 33.13
+    },
+    {
+        "id": 3683,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 33.53
+    },
+    {
+        "id": 3695,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 33.8
+    },
+    {
+        "id": 3711,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 34.13
+    },
+    {
+        "id": 3717,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 34.27
+    },
+    {
+        "id": 3725,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 34.47
+    },
+    {
+        "id": 3730,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 34.6
+    },
+    {
+        "id": 3776,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 35.85
+    },
+    {
+        "id": 3791,
+        "origin": "SOUTH",
+        "dest": "NORTH",
+        "depart": 36.33
+    },
+    {
+        "id": 3792,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 36.4
+    },
+    {
+        "id": 3796,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 36.87
+    },
+    {
+        "id": 3837,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 37.92
+    },
+    {
+        "id": 3844,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 37.97
+    },
+    {
+        "id": 3849,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 38.05
+    },
+    {
+        "id": 3864,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 38.22
+    },
+    {
+        "id": 3878,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 38.47
+    },
+    {
+        "id": 3879,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 38.47
+    },
+    {
+        "id": 3893,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 38.53
+    },
+    {
+        "id": 3951,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 39.42
+    },
+    {
+        "id": 3960,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 39.5
+    },
+    {
+        "id": 3964,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 39.55
+    },
+    {
+        "id": 3973,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 39.68
+    },
+    {
+        "id": 3974,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 39.75
+    },
+    {
+        "id": 4000,
+        "origin": "NORTH",
+        "dest": "SOUTH",
+        "depart": 40.12
+    },
+    {
+        "id": 4020,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 40.35
+    },
+    {
+        "id": 4080,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 40.95
+    },
+    {
+        "id": 4085,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 41.02
+    },
+    {
+        "id": 4100,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 41.15
+    },
+    {
+        "id": 4115,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 41.28
+    },
+    {
+        "id": 4117,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 41.3
+    },
+    {
+        "id": 4130,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 41.42
+    },
+    {
+        "id": 4157,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 41.63
+    },
+    {
+        "id": 4168,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 41.75
+    },
+    {
+        "id": 4180,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 41.88
+    },
+    {
+        "id": 4200,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 42.02
+    },
+    {
+        "id": 4202,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 42.08
+    },
+    {
+        "id": 4203,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 42.08
+    },
+    {
+        "id": 4222,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 42.22
+    },
+    {
+        "id": 4282,
+        "origin": "NORTH",
+        "dest": "WEST",
+        "depart": 42.62
+    },
+    {
+        "id": 4378,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 43.55
+    },
+    {
+        "id": 4382,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 43.57
+    },
+    {
+        "id": 4392,
+        "origin": "EAST",
+        "dest": "NORTH",
+        "depart": 43.62
+    },
+    {
+        "id": 4431,
+        "origin": "NORTH",
+        "dest": "WEST",
+        "depart": 43.82
+    },
+    {
+        "id": 4461,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 44.02
+    },
+    {
+        "id": 4463,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 44.02
+    },
+    {
+        "id": 4475,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 44.08
+    },
+    {
+        "id": 4515,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 44.28
+    },
+    {
+        "id": 4551,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 44.48
+    },
+    {
+        "id": 4557,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 44.55
+    },
+    {
+        "id": 4600,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 44.83
+    },
+    {
+        "id": 4613,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 44.95
+    },
+    {
+        "id": 4618,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 45.08
+    },
+    {
+        "id": 4656,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 45.62
+    },
+    {
+        "id": 4687,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 45.98
+    },
+    {
+        "id": 4767,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 46.48
+    },
+    {
+        "id": 4768,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 46.48
+    },
+    {
+        "id": 4778,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 46.62
+    },
+    {
+        "id": 4823,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 46.88
+    },
+    {
+        "id": 4844,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 47.08
+    },
+    {
+        "id": 4852,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 47.15
+    },
+    {
+        "id": 4878,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 47.42
+    },
+    {
+        "id": 4901,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 47.48
+    },
+    {
+        "id": 4941,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 47.75
+    },
+    {
+        "id": 4967,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 48.02
+    },
+    {
+        "id": 5011,
+        "origin": "WEST",
+        "dest": "NORTH",
+        "depart": 48.42
+    },
+    {
+        "id": 5013,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 48.42
+    },
+    {
+        "id": 5034,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 48.62
+    },
+    {
+        "id": 5073,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 49.22
+    },
+    {
+        "id": 5087,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 49.42
+    },
+    {
+        "id": 5118,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 49.75
+    },
+    {
+        "id": 5147,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 49.88
+    },
+    {
+        "id": 5198,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 50.42
+    },
+    {
+        "id": 5218,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 50.55
+    },
+    {
+        "id": 5221,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 50.58
+    },
+    {
+        "id": 5269,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 50.88
+    },
+    {
+        "id": 5433,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 52.42
+    },
+    {
+        "id": 5490,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 53.02
+    },
+    {
+        "id": 5543,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 53.68
+    },
+    {
+        "id": 5599,
+        "origin": "EAST",
+        "dest": "WEST",
+        "depart": 54.22
+    },
+    {
+        "id": 5739,
+        "origin": "WEST",
+        "dest": "EAST",
+        "depart": 55.63
+    },
+    {
+        "id": 5743,
+        "origin": "WEST",
+        "dest": "SOUTH",
+        "depart": 55.7
+    }
+]

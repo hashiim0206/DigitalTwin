@@ -9,9 +9,9 @@ venv/
 *.egg-info/
 
 # Generated outputs
-outputs/*.xml
-outputs/*.json
-outputs/dashboard/*.png
+# outputs/*.xml
+# outputs/*.json
+# outputs/dashboard/*.png
 best_params.json
 
 # IDE

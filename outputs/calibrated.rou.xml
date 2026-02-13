@@ -1,0 +1,893 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <vType id="car" accel="3.0" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="70" color="white" />
+    <vType id="static_car" accel="0.1" decel="0.1" length="5" color="red" />
+    <vehicle id="veh_1" type="car" depart="0.00" departLane="3">
+        <route edges="S WW" />
+    </vehicle>
+    <vehicle id="veh_2" type="car" depart="0.00" departLane="3">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_3" type="car" depart="0.00" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_4" type="static_car" depart="0.00" departLane="3">
+        <route edges="W NN" />
+        <stop lane="W_3" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_5" type="car" depart="0.00" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_6" type="static_car" depart="0.00" departLane="6">
+        <route edges="E SS" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_7" type="static_car" depart="0.00" departLane="3">
+        <route edges="S NN" />
+        <stop lane="S_3" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_8" type="car" depart="0.00" departLane="6">
+        <route edges="E SS" />
+    </vehicle>
+    <vehicle id="veh_9" type="static_car" depart="0.00" departLane="2">
+        <route edges="W SS" />
+        <stop lane="W_2" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_10" type="car" depart="0.00" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_11" type="car" depart="0.00" departLane="5">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_12" type="static_car" depart="0.00" departLane="2">
+        <route edges="W SS" />
+        <stop lane="W_2" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_13" type="car" depart="0.00" departLane="1">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_14" type="car" depart="0.00" departLane="4">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_16" type="static_car" depart="0.00" departLane="6">
+        <route edges="S WW" />
+        <stop lane="S_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_17" type="static_car" depart="0.00" departLane="6">
+        <route edges="W SS" />
+        <stop lane="W_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_18" type="static_car" depart="0.00" departLane="6">
+        <route edges="E NN" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_20" type="static_car" depart="0.00" departLane="2">
+        <route edges="W NN" />
+        <stop lane="W_2" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_21" type="car" depart="0.00" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_22" type="car" depart="0.00" departLane="6">
+        <route edges="E SS" />
+    </vehicle>
+    <vehicle id="veh_23" type="static_car" depart="0.00" departLane="3">
+        <route edges="W EE" />
+        <stop lane="W_3" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_27" type="car" depart="0.10" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_28" type="car" depart="0.10" departLane="6">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_67" type="car" depart="0.23" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_74" type="static_car" depart="0.23" departLane="6">
+        <route edges="W SS" />
+        <stop lane="W_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_75" type="static_car" depart="0.25" departLane="6">
+        <route edges="E SS" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_88" type="car" depart="0.30" departLane="3">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_152" type="car" depart="0.52" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_184" type="static_car" depart="0.67" departLane="6">
+        <route edges="W NN" />
+        <stop lane="W_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_203" type="car" depart="0.77" departLane="4">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_205" type="car" depart="0.77" departLane="3">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_252" type="car" depart="1.03" departLane="1">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_267" type="car" depart="1.17" departLane="3">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_276" type="car" depart="1.23" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_278" type="static_car" depart="1.23" departLane="6">
+        <route edges="S NN" />
+        <stop lane="S_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_282" type="car" depart="1.30" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_327" type="static_car" depart="1.65" departLane="6">
+        <route edges="W NN" />
+        <stop lane="W_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_342" type="car" depart="1.83" departLane="6">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_348" type="car" depart="1.90" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_351" type="car" depart="2.03" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_377" type="car" depart="2.23" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_378" type="car" depart="2.23" departLane="4">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_392" type="car" depart="2.30" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_437" type="car" depart="2.52" departLane="6">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_454" type="car" depart="2.83" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_455" type="car" depart="2.83" departLane="4">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_482" type="car" depart="3.57" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_491" type="car" depart="3.77" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_501" type="car" depart="3.97" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_527" type="static_car" depart="4.10" departLane="1">
+        <route edges="S WW" />
+        <stop lane="S_1" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_537" type="car" depart="4.17" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_549" type="static_car" depart="4.23" departLane="6">
+        <route edges="S EE" />
+        <stop lane="S_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_576" type="car" depart="4.50" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_584" type="car" depart="4.53" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_606" type="car" depart="4.77" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_696" type="car" depart="5.38" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_715" type="static_car" depart="5.43" departLane="6">
+        <route edges="S WW" />
+        <stop lane="S_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_720" type="car" depart="5.45" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_721" type="car" depart="5.45" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_789" type="car" depart="5.85" departLane="6">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_802" type="car" depart="5.98" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_803" type="car" depart="5.98" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_808" type="static_car" depart="6.00" departLane="6">
+        <route edges="E SS" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_895" type="static_car" depart="6.45" departLane="5">
+        <route edges="E WW" />
+        <stop lane="E_5" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_906" type="car" depart="6.52" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_931" type="car" depart="6.65" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_932" type="static_car" depart="6.65" departLane="6">
+        <route edges="E SS" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_941" type="car" depart="6.72" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_952" type="car" depart="6.78" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_999" type="car" depart="7.12" departLane="1">
+        <route edges="W NN" />
+    </vehicle>
+    <vehicle id="veh_1033" type="static_car" depart="7.32" departLane="6">
+        <route edges="E SS" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1056" type="car" depart="7.52" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1077" type="static_car" depart="7.63" departLane="6">
+        <route edges="E SS" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1108" type="car" depart="7.78" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1125" type="car" depart="7.92" departLane="1">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_1142" type="static_car" depart="8.18" departLane="6">
+        <route edges="N EE" />
+        <stop lane="N_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1144" type="car" depart="8.25" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_1152" type="car" depart="8.45" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1180" type="car" depart="8.63" departLane="6">
+        <route edges="E SS" />
+    </vehicle>
+    <vehicle id="veh_1181" type="car" depart="8.65" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1183" type="car" depart="8.65" departLane="6">
+        <route edges="N WW" />
+    </vehicle>
+    <vehicle id="veh_1209" type="car" depart="9.05" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_1210" type="car" depart="9.05" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_1250" type="car" depart="9.25" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_1312" type="car" depart="9.65" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_1320" type="car" depart="9.72" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1324" type="static_car" depart="9.73" departLane="4">
+        <route edges="W NN" />
+        <stop lane="W_4" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1338" type="car" depart="9.92" departLane="6">
+        <route edges="N WW" />
+    </vehicle>
+    <vehicle id="veh_1339" type="car" depart="9.92" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1366" type="static_car" depart="10.08" departLane="4">
+        <route edges="W NN" />
+        <stop lane="W_4" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1373" type="car" depart="10.12" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1389" type="car" depart="10.32" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_1397" type="car" depart="10.38" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1406" type="car" depart="10.45" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1408" type="car" depart="10.45" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_1414" type="car" depart="10.52" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1424" type="car" depart="10.58" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1481" type="car" depart="10.92" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1490" type="static_car" depart="10.97" departLane="6">
+        <route edges="W NN" />
+        <stop lane="W_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1493" type="car" depart="10.98" departLane="2">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1507" type="car" depart="11.38" departLane="6">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_1542" type="car" depart="11.85" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1546" type="car" depart="11.87" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1557" type="car" depart="11.98" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1558" type="car" depart="11.98" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1628" type="static_car" depart="12.67" departLane="6">
+        <route edges="S EE" />
+        <stop lane="S_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1649" type="car" depart="12.83" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1650" type="car" depart="12.85" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1664" type="car" depart="12.98" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1665" type="car" depart="12.98" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1678" type="car" depart="13.05" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_1751" type="car" depart="13.72" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_1784" type="static_car" depart="13.95" departLane="4">
+        <route edges="W NN" />
+        <stop lane="W_4" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1837" type="car" depart="14.32" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1856" type="car" depart="14.58" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_1904" type="car" depart="14.98" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1907" type="car" depart="15.00" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_1908" type="static_car" depart="15.00" departLane="1">
+        <route edges="S EE" />
+        <stop lane="S_1" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1910" type="static_car" depart="15.02" departLane="6">
+        <route edges="E NN" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1912" type="static_car" depart="15.03" departLane="5">
+        <route edges="W NN" />
+        <stop lane="W_5" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_1913" type="car" depart="15.12" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_1914" type="car" depart="15.12" departLane="6">
+        <route edges="N WW" />
+    </vehicle>
+    <vehicle id="veh_2064" type="car" depart="16.92" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2072" type="car" depart="16.98" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_2129" type="car" depart="17.52" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_2155" type="car" depart="17.72" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_2200" type="static_car" depart="18.05" departLane="2">
+        <route edges="W SS" />
+        <stop lane="W_2" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_2221" type="car" depart="18.25" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2290" type="car" depart="18.85" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2319" type="car" depart="18.98" departLane="4">
+        <route edges="N WW" />
+    </vehicle>
+    <vehicle id="veh_2326" type="car" depart="19.05" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2333" type="static_car" depart="19.07" departLane="6">
+        <route edges="W SS" />
+        <stop lane="W_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_2358" type="car" depart="19.32" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_2507" type="car" depart="20.05" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_2508" type="car" depart="20.05" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2513" type="static_car" depart="20.10" departLane="1">
+        <route edges="W NN" />
+        <stop lane="W_1" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_2514" type="car" depart="20.12" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2515" type="car" depart="20.12" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2528" type="car" depart="20.25" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2585" type="static_car" depart="20.97" departLane="2">
+        <route edges="W NN" />
+        <stop lane="W_2" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_2624" type="static_car" depart="21.37" departLane="6">
+        <route edges="E NN" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_2636" type="car" depart="21.58" departLane="1">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_2637" type="static_car" depart="21.58" departLane="6">
+        <route edges="E NN" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_2638" type="car" depart="21.65" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_2678" type="car" depart="22.20" departLane="3">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2679" type="car" depart="22.20" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_2835" type="car" depart="23.33" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_2890" type="static_car" depart="23.47" departLane="6">
+        <route edges="E WW" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_2918" type="car" depart="23.53" departLane="1">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_2919" type="car" depart="23.53" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3018" type="car" depart="24.33" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3068" type="car" depart="24.82" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3082" type="static_car" depart="24.93" departLane="4">
+        <route edges="W SS" />
+        <stop lane="W_4" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3086" type="static_car" depart="24.98" departLane="6">
+        <route edges="E NN" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3091" type="car" depart="25.13" departLane="1">
+        <route edges="S EE" />
+    </vehicle>
+    <vehicle id="veh_3106" type="car" depart="25.40" departLane="1">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_3125" type="car" depart="25.75" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3138" type="car" depart="25.90" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_3143" type="car" depart="26.00" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3155" type="car" depart="26.20" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3166" type="static_car" depart="26.67" departLane="6">
+        <route edges="E NN" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3173" type="car" depart="26.87" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3183" type="car" depart="27.00" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3190" type="car" depart="27.07" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3226" type="car" depart="27.60" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3235" type="car" depart="27.73" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3241" type="car" depart="27.82" departLane="6">
+        <route edges="E SS" />
+    </vehicle>
+    <vehicle id="veh_3259" type="car" depart="28.00" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3260" type="static_car" depart="28.00" departLane="4">
+        <route edges="W SS" />
+        <stop lane="W_4" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3266" type="car" depart="28.13" departLane="5">
+        <route edges="S WW" />
+    </vehicle>
+    <vehicle id="veh_3323" type="car" depart="28.93" departLane="6">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_3336" type="car" depart="29.07" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3350" type="car" depart="29.20" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3370" type="car" depart="29.40" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_3371" type="car" depart="29.40" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_3374" type="car" depart="29.47" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3382" type="car" depart="29.53" departLane="5">
+        <route edges="S WW" />
+    </vehicle>
+    <vehicle id="veh_3392" type="car" depart="29.60" departLane="6">
+        <route edges="N EE" />
+    </vehicle>
+    <vehicle id="veh_3415" type="static_car" depart="29.73" departLane="4">
+        <route edges="W NN" />
+        <stop lane="W_4" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3427" type="car" depart="30.00" departLane="6">
+        <route edges="E SS" />
+    </vehicle>
+    <vehicle id="veh_3472" type="car" depart="30.40" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3480" type="car" depart="30.45" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3495" type="car" depart="30.67" departLane="6">
+        <route edges="W NN" />
+    </vehicle>
+    <vehicle id="veh_3515" type="car" depart="30.80" departLane="6">
+        <route edges="S WW" />
+    </vehicle>
+    <vehicle id="veh_3529" type="static_car" depart="31.18" departLane="1">
+        <route edges="S NN" />
+        <stop lane="S_1" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3530" type="car" depart="31.20" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3531" type="car" depart="31.20" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3555" type="car" depart="31.42" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3559" type="car" depart="31.47" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3562" type="car" depart="31.53" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3592" type="car" depart="31.80" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3598" type="car" depart="31.87" departLane="5">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_3605" type="static_car" depart="32.00" departLane="4">
+        <route edges="W SS" />
+        <stop lane="W_4" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3617" type="car" depart="32.12" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3637" type="car" depart="32.73" departLane="6">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_3641" type="static_car" depart="32.80" departLane="3">
+        <route edges="W SS" />
+        <stop lane="W_3" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3656" type="car" depart="33.00" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_3657" type="car" depart="33.00" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_3660" type="car" depart="33.13" departLane="6">
+        <route edges="E SS" />
+    </vehicle>
+    <vehicle id="veh_3683" type="car" depart="33.53" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3695" type="car" depart="33.80" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_3711" type="car" depart="34.13" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_3717" type="static_car" depart="34.27" departLane="6">
+        <route edges="E NN" />
+        <stop lane="E_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_3725" type="car" depart="34.47" departLane="5">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_3730" type="car" depart="34.60" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3776" type="car" depart="35.85" departLane="4">
+        <route edges="W NN" />
+    </vehicle>
+    <vehicle id="veh_3791" type="car" depart="36.33" departLane="4">
+        <route edges="S NN" />
+    </vehicle>
+    <vehicle id="veh_3792" type="car" depart="36.40" departLane="4">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_3796" type="car" depart="36.87" departLane="6">
+        <route edges="N SS" />
+    </vehicle>
+    <vehicle id="veh_3837" type="car" depart="37.92" departLane="2">
+        <route edges="W NN" />
+    </vehicle>
+    <vehicle id="veh_3844" type="car" depart="37.97" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3849" type="car" depart="38.05" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3864" type="car" depart="38.22" departLane="2">
+        <route edges="W NN" />
+    </vehicle>
+    <vehicle id="veh_3878" type="car" depart="38.47" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3879" type="car" depart="38.47" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3893" type="car" depart="38.53" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3951" type="car" depart="39.42" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3960" type="car" depart="39.50" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3964" type="car" depart="39.55" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_3973" type="car" depart="39.68" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_3974" type="car" depart="39.75" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4000" type="static_car" depart="40.12" departLane="6">
+        <route edges="N SS" />
+        <stop lane="N_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_4020" type="car" depart="40.35" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4080" type="car" depart="40.95" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4085" type="car" depart="41.02" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4100" type="car" depart="41.15" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4115" type="car" depart="41.28" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4117" type="car" depart="41.30" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4130" type="car" depart="41.42" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4157" type="car" depart="41.63" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4168" type="car" depart="41.75" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4180" type="car" depart="41.88" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4200" type="car" depart="42.02" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4202" type="car" depart="42.08" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4203" type="car" depart="42.08" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4222" type="car" depart="42.22" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4282" type="static_car" depart="42.62" departLane="6">
+        <route edges="N WW" />
+        <stop lane="N_6" endPos="25" duration="300" />
+    </vehicle>
+    <vehicle id="veh_4378" type="car" depart="43.55" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4382" type="car" depart="43.57" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4392" type="car" depart="43.62" departLane="6">
+        <route edges="E NN" />
+    </vehicle>
+    <vehicle id="veh_4431" type="car" depart="43.82" departLane="6">
+        <route edges="N WW" />
+    </vehicle>
+    <vehicle id="veh_4461" type="car" depart="44.02" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4463" type="car" depart="44.02" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4475" type="car" depart="44.08" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4515" type="car" depart="44.28" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4551" type="car" depart="44.48" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4557" type="car" depart="44.55" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4600" type="car" depart="44.83" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4613" type="car" depart="44.95" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4618" type="car" depart="45.08" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4656" type="car" depart="45.62" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4687" type="car" depart="45.98" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4767" type="car" depart="46.48" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4768" type="car" depart="46.48" departLane="2">
+        <route edges="W SS" />
+    </vehicle>
+    <vehicle id="veh_4778" type="car" depart="46.62" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4823" type="car" depart="46.88" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4844" type="car" depart="47.08" departLane="2">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4852" type="car" depart="47.15" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4878" type="car" depart="47.42" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4901" type="car" depart="47.48" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_4941" type="car" depart="47.75" departLane="5">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_4967" type="car" depart="48.02" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5011" type="static_car" depart="48.42" departLane="6">
+        <route edges="W NN" />
+        <stop lane="W_6" endPos="40" duration="300" />
+    </vehicle>
+    <vehicle id="veh_5013" type="car" depart="48.42" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_5034" type="car" depart="48.62" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5073" type="car" depart="49.22" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5087" type="car" depart="49.42" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5118" type="car" depart="49.75" departLane="1">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5147" type="car" depart="49.88" departLane="3">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5198" type="car" depart="50.42" departLane="4">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5218" type="car" depart="50.55" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_5221" type="car" depart="50.58" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_5269" type="car" depart="50.88" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_5433" type="car" depart="52.42" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_5490" type="car" depart="53.02" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_5543" type="car" depart="53.68" departLane="6">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5599" type="car" depart="54.22" departLane="6">
+        <route edges="E WW" />
+    </vehicle>
+    <vehicle id="veh_5739" type="car" depart="55.63" departLane="5">
+        <route edges="W EE" />
+    </vehicle>
+    <vehicle id="veh_5743" type="car" depart="55.70" departLane="6">
+        <route edges="W SS" />
+    </vehicle>
+</routes>
