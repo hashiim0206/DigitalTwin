@@ -9,11 +9,10 @@ venv/
 *.egg-info/
 
 # Generated outputs
-outputs/calibrated.rou.xml
-outputs/traffic_data.json
-outputs/sumo_state.json
-outputs/tripinfo.xml
+outputs/*.xml
+outputs/*.json
 outputs/dashboard/*.png
+best_params.json
 
 # IDE
 .vscode/

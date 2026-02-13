@@ -85,22 +85,27 @@ python comprehensive_comparison.py
 ```bash
 python dashboard_generator.py
 ```
-**Output**: Three publication-quality figures in `outputs/dashboard/`
+**Output**: 
+- `outputs/dashboard/fig1_turn_comparison.png`
+- `outputs/dashboard/fig2_temporal_comparison.png`
+- `outputs/dashboard/fig3_summary_dashboard.png`
+- `outputs/dashboard/fig4_spacetime.png`
 
-## Key Results
+## Key Results (Version 2.0)
 
 ### Digital Twin Fidelity (Video AI vs SUMO)
-- **RMSE**: 0.000 vehicles/second (perfect temporal alignment)
-- **Volume Accuracy**: 100% (276/276 vehicles matched)
-- **Turn Replication**: 100% perfect match
-  - Straight: 178 = 178 (0 deviation)
-  - Left: 48 = 48 (0 deviation)
-  - Right: 50 = 50 (0 deviation)
+- **Volume Accuracy**: **100.0%** (279/279 vehicles matched)
+- **RMSE**: **0.000** vehicles/second (perfect temporal alignment)
+- **Turn Replication**: **100%** perfect match
+- **Space-Time Validation**: Verified with `fig4_spacetime.png`
 
 ### AI Detection Quality (Video AI vs Ground Truth)
-- **Volume Accuracy**: 99.28% (276/278 vehicles)
-- **Turn Detection**: 74-84% accuracy per turn type
-- **Overall Fidelity**: 86.82%
+- **Volume Accuracy**: **99.6%** (279/278 vehicles)
+- **Turn Detection**: **76-95%** accuracy per turn type
+    - Left Turns: ~94.8%
+    - Right Turns: ~82.0%
+    - Straight: ~76.1%
+
 
 ## How It Works
 
