@@ -1,6 +1,10 @@
 # Digital-Twin-in-the-Loop AI Traffic Signal Control
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://digitaltwin.streamlit.app)
+
 An end-to-end system that bridges the **Simulation-to-Reality (Sim-to-Real) Gap** in AI-based traffic signal control by constructing a physics-calibrated Digital Twin from real-world drone footage and training a constrained Reinforcement Learning agent within it.
+
+> **Live Dashboard:** [https://digitaltwin.streamlit.app](https://digitaltwin.streamlit.app)
 
 ---
 
