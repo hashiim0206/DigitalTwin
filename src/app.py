@@ -107,29 +107,40 @@ RL_LOG_DIR = os.path.join(OUTPUT_DIR, 'rl_logs')
 # --- HELPERS ---
 @st.cache_data(ttl=10)
 def load_rl_metrics():
-    if EventAccumulator is None or not os.path.exists(RL_LOG_DIR):
-        return None
-        
-    subdirs = [os.path.join(RL_LOG_DIR, d) for d in os.listdir(RL_LOG_DIR) if os.path.isdir(os.path.join(RL_LOG_DIR, d))]
-    if not subdirs:
-        return None
-    
-    # Get latest PPO run
-    latest_dir = max(subdirs, key=os.path.getmtime)
-    
-    try:
-        ea = EventAccumulator(latest_dir)
-        ea.Reload()
-        tags = ea.Tags()['scalars']
-        if 'eval/mean_reward' in tags:
-            rewards = ea.Scalars('eval/mean_reward')
+    # 1. Try loading from evaluations.npz (tracked in Git, standalone)
+    eval_npz_path = os.path.join(RL_LOG_DIR, 'evaluations.npz')
+    if os.path.exists(eval_npz_path):
+        try:
+            data = np.load(eval_npz_path)
+            timesteps = data['timesteps']
+            results = data['results']
+            mean_rewards = results.mean(axis=1)
             df = pd.DataFrame({
-                'Timestep': [r.step for r in rewards],
-                'Mean Reward (Penalty)': [r.value for r in rewards]
+                'Timestep': timesteps,
+                'Mean Reward (Penalty)': mean_rewards
             }).set_index('Timestep')
             return df
-    except Exception as e:
-        pass
+        except Exception:
+            pass
+
+    # 2. Fallback to EventAccumulator if TensorBoard logs exist
+    if EventAccumulator is not None and os.path.exists(RL_LOG_DIR):
+        subdirs = [os.path.join(RL_LOG_DIR, d) for d in os.listdir(RL_LOG_DIR) if os.path.isdir(os.path.join(RL_LOG_DIR, d))]
+        if subdirs:
+            latest_dir = max(subdirs, key=os.path.getmtime)
+            try:
+                ea = EventAccumulator(latest_dir)
+                ea.Reload()
+                tags = ea.Tags()['scalars']
+                if 'eval/mean_reward' in tags:
+                    rewards = ea.Scalars('eval/mean_reward')
+                    df = pd.DataFrame({
+                        'Timestep': [r.step for r in rewards],
+                        'Mean Reward (Penalty)': [r.value for r in rewards]
+                    }).set_index('Timestep')
+                    return df
+            except Exception:
+                pass
     return None
 
 # --- UI MAIN ---
