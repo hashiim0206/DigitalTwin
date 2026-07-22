@@ -1,17 +1,5 @@
-# Data Processing & Math
-numpy>=1.24.0
-pandas>=2.0.0
-scipy>=1.10.0
-scikit-learn>=1.0.0
-
-# Visualization & Dashboard
+# Dashboard Dependencies (Streamlit Cloud)
 streamlit>=1.30.0
 altair>=5.0.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-Pillow>=10.0.0
-
-# Machine Learning & Optimization
-optuna>=3.0.0
-tensorboard>=2.14.0
-stable-baselines3>=2.0.0
+pandas>=2.0.0
+numpy>=1.24.0
