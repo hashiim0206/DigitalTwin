@@ -9,6 +9,7 @@ import numpy as np
 import os
 import json
 import altair as alt
+from datetime import datetime
 from comprehensive_comparison import load_ground_truth, analyze_turns
 
 try:
@@ -348,13 +349,14 @@ with tab5:
 
 # --- SIDEBAR ---
 st.sidebar.markdown("## System Status")
-st.sidebar.markdown(f"**Online**: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+st.sidebar.markdown(f"**Last Updated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 st.sidebar.markdown("---")
-st.sidebar.markdown("### Active Deployment")
-st.sidebar.markdown("**Location**: Cluster J1-J2-J4-J6")
-st.sidebar.markdown("**Control Mode**: RL-Supervised")
-st.sidebar.markdown("**Environment**: High-Fidelity Twin")
+st.sidebar.markdown("### Configuration")
+st.sidebar.markdown("**Data Source**: Drone Video (YouTube)")
+st.sidebar.markdown("**Simulator**: SUMO (Krauss Model)")
+st.sidebar.markdown("**RL Agent**: PPO (Stable-Baselines3)")
+st.sidebar.markdown("**Calibration**: Optuna Bayesian Opt.")
 st.sidebar.markdown("---")
-st.sidebar.markdown("### Telemetry")
-st.sidebar.metric("API Latency", "12 ms", "-2 ms")
-st.sidebar.metric("Agent Sync", "OK", "Active")
+st.sidebar.markdown("### Training")
+st.sidebar.metric("Timesteps", "15,000", "Proof-of-Concept")
+st.sidebar.metric("Optimizer Trials", "50", "Completed")
