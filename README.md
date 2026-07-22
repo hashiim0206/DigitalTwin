@@ -73,9 +73,9 @@ DigitalTwin/
 │   │
 │   ├── control/                     # Module 3: Reinforcement Learning
 │   │   ├── env.py                   # Custom Gymnasium environment (SUMO + TraCI)
-│   │   ├── train.py                 # PPO training with fidelity constraint
-│   │   ├── train_baseline.py        # PPO training without fidelity (ablation)
-│   │   ├── evaluate.py              # Strategy benchmarking & emissions/safety
+│   │   ├── train.py                 # Main RL training script (with Digital-Twin fidelity constraint)
+│   │   ├── train_baseline.py        # Control-group RL training script (unconstrained, for benchmark comparison)
+│   │   ├── evaluate.py              # Strategy benchmarking & emissions/safety evaluation
 │   │   └── ablation.py              # Sensitivity analysis across fidelity weights
 │   │
 │   └── experiments/                 # Scenario testing
@@ -166,11 +166,16 @@ If you wish to re-train the AI agent, re-run Bayesian optimization, or generate 
    ```
    *Runs 50 Optuna Bayesian Optimization trials in SUMO to calibrate driver physics parameters (`tau`, `accel`, `decel`, `minGap`, `sigma`). Generates `outputs/best_params.json` and `outputs/sumo_state.json`.*
 
-3. **Module 3: AI Controller Training**
+3. **Module 3: AI Controller Training (Main Model)**
    ```bash
    python src/control/train.py
    ```
-   *Trains the PPO Reinforcement Learning agent inside the calibrated Digital Twin using the Spatial RMSE fidelity penalty. Generates `outputs/rl_logs/final_ppo_model.zip` and `outputs/rl_logs/evaluations.npz`.*
+   *Trains the main PPO Reinforcement Learning agent inside the calibrated Digital Twin using the Spatial RMSE fidelity penalty. Generates `outputs/rl_logs/final_ppo_model.zip` and `outputs/rl_logs/evaluations.npz`.*
+
+   *(Optional Control Group)*: To re-train the unconstrained baseline model for comparative benchmarking, run:
+   ```bash
+   python src/control/train_baseline.py
+   ```
 
 4. **Module 4: Baseline Strategy Benchmarking**
    ```bash
