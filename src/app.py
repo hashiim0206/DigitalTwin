@@ -19,56 +19,81 @@ except ImportError:
 
 st.set_page_config(page_title="CityFlow Traffic Intelligence", layout="wide")
 
-# --- CUSTOM CSS (Premium UI) ---
+# --- CUSTOM CSS (High Contrast Light Mode UI) ---
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
     
     html, body, [class*="css"] {
         font-family: 'Inter', sans-serif;
+        color: #0F172A !important;
     }
     
-    /* Hide Streamlit Branding and Menus */
-    header {visibility: hidden;}
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+    /* Main Background */
+    .stApp {
+        background-color: #FFFFFF !important;
+    }
     
+    /* Headers */
     h1 {
-        font-weight: 600 !important;
-        color: #1E3A8A !important;
+        font-weight: 700 !important;
+        color: #0F172A !important;
     }
     
     h2, h3 {
-        font-weight: 400 !important;
-        color: #374151 !important; 
+        font-weight: 600 !important;
+        color: #1E293B !important; 
     }
     
+    p, span, label {
+        color: #334155 !important;
+    }
+    
+    /* Metric Cards */
     div[data-testid="stMetricValue"] {
         font-size: 28px !important;
-        font-weight: 600 !important;
-        color: #111827 !important;
+        font-weight: 700 !important;
+        color: #0F172A !important;
     }
     
     div[data-testid="stMetricLabel"] {
-        font-size: 14px !important;
-        color: #6B7280 !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: #475569 !important;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
     
+    /* Sidebar Styling */
     section[data-testid="stSidebar"] {
         background-color: #F8FAFC !important;
-        border-right: 1px solid #E2E8F0;
+        border-right: 1px solid #E2E8F0 !important;
     }
     
+    section[data-testid="stSidebar"] * {
+        color: #0F172A !important;
+    }
+    
+    section[data-testid="stSidebar"] h2, section[data-testid="stSidebar"] h3 {
+        color: #0F172A !important;
+        font-weight: 700 !important;
+    }
+    
+    /* Tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 20px;
-        border-bottom: 1px solid #E2E8F0;
+        border-bottom: 2px solid #E2E8F0;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        color: #475569 !important;
+        font-weight: 500 !important;
     }
     
     .stTabs [aria-selected="true"] {
-        color: #1E3A8A !important;
-        font-weight: 600 !important;
+        color: #0EA5E9 !important;
+        font-weight: 700 !important;
+        border-bottom: 2px solid #0EA5E9 !important;
     }
 </style>
 """, unsafe_allow_html=True)
