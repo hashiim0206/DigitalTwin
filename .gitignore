@@ -7,12 +7,7 @@ __pycache__/
 env/
 venv/
 *.egg-info/
-
-# Generated outputs
-# outputs/*.xml
-# outputs/*.json
-# outputs/dashboard/*.png
-best_params.json
+.env
 
 # IDE
 .vscode/
@@ -27,3 +22,20 @@ Thumbs.db
 # SUMO temporary files
 *.log
 *.sumocfg~
+
+# Large generated outputs (keep repo lightweight)
+outputs/fcd.xml
+outputs/matched_trajectories.json
+outputs/optuna_study.db
+outputs/tripinfo.xml
+outputs/xy_overlays.png
+outputs/fidelity_histograms.png
+outputs/micro_metrics.json
+outputs/scenarios/tripinfo_baseline.xml
+
+# Static dashboard PNGs (replaced by native Streamlit charts)
+outputs/dashboard/
+
+# TensorBoard event files (binary, not useful on GitHub)
+outputs/rl_logs/PPO_*/
+outputs/rl_logs_baseline/PPO_*/

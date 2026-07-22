@@ -1,180 +1,163 @@
-# Trajectory-Calibrated Digital Twin for Signalized Intersections
+# Digital-Twin-in-the-Loop AI Traffic Signal Control
 
-A digital twin system that creates an accurate SUMO traffic simulation from real-world drone video by comparing actual vehicle paths with simulated ones.
+An end-to-end system that bridges the **Simulation-to-Reality (Sim-to-Real) Gap** in AI-based traffic signal control by constructing a physics-calibrated Digital Twin from real-world drone footage and training a constrained Reinforcement Learning agent within it.
 
-## Project Overview
+---
 
-This project implements a **trajectory-calibrated digital twin** of a signalized intersection that achieves high accuracy between real traffic and its virtual simulation. Using AI-powered vehicle detection from drone footage, the system extracts time-stamped vehicle paths, maps them into SUMO (Simulation of Urban MObility) coordinate space, and replicates observed traffic patterns with path-level precision.
+## About
 
-Unlike traditional approaches that only check aggregate measures (total counts, average speeds, delays), this system performs **trajectory-level calibration** by comparing real and simulated vehicle paths. This ensures the simulation truly matches real-world driving behavior at a detailed level. The system achieves perfect digital twin fidelity with 100% replication accuracy.
+Traditional traffic signals operate on fixed timing plans, causing unnecessary delays and congestion. While Reinforcement Learning (RL) can dynamically optimize signal phases, a critical vulnerability exists: agents trained in standard microsimulators exploit unrealistic physics (e.g., instantaneous braking), producing policies that fail catastrophically on real roads.
 
-The framework supports both replaying observed trajectories and running free simulation, providing a foundation for future machine-learning-based prediction and adaptive traffic control.
+This project solves the problem by building a **Digital Twin** — an exact digital replica of a real intersection — calibrated with Bayesian Machine Learning to match actual human driving behavior extracted from drone video. The RL agent is then trained inside this hyper-realistic environment with an explicit fidelity penalty, ensuring its learned policy transfers safely to real-world deployment.
+
+---
+
+## System Architecture & Flow
+
+The system operates through four sequential modules:
+
+```
+┌─────────────────────┐     ┌─────────────────────────┐     ┌──────────────────────────┐     ┌──────────────────────────┐
+│  Module 1            │     │  Module 2                │     │  Module 3                 │     │  Module 4                 │
+│  Video Trajectory    │────▶│  Microsimulation         │────▶│  AI Controller            │────▶│  Performance              │
+│  Extraction &        │     │  Physics Calibration     │     │  Optimization (RL)        │     │  Analytics & Safety       │
+│  Validation          │     │  (Bayesian Optimization) │     │                           │     │                           │
+└─────────────────────┘     └─────────────────────────┘     └──────────────────────────┘     └──────────────────────────┘
+```
+
+1. **Video Trajectory Extraction:** Computer vision (YOLO + DeepSORT) parses overhead drone footage to extract X/Y coordinates, speed, and lane assignments of every vehicle.
+2. **Digital Twin Validation:** Extracted data is injected into the SUMO microsimulator. Turn type proportions and temporal volume distributions are verified against Ground Truth to confirm the baseline simulation mirrors reality.
+3. **Microsimulation Physics Calibration:** Optuna (Bayesian Optimization) runs 50+ trials to tune the Krauss Car-Following Model parameters (`tau`, `accel`, `decel`, `minGap`, `sigma`), minimizing Spatial RMSE against real-world trajectories.
+4. **AI Controller Optimization:** A PPO Reinforcement Learning agent trains inside the calibrated Digital Twin. It is rewarded for reducing system delay and penalized for deviating from calibrated fidelity, causing excessive CO2 emissions, or triggering safety conflicts.
+
+---
 
 ## Project Structure
 
 ```
-DT/
-├── src/                          # Source code
-│   ├── traffic_master.py         # AI vehicle detection from video
-│   ├── traci_runner.py           # SUMO simulation controller
-│   ├── accuracy_checker.py       # Validates AI detection quality
-│   ├── comprehensive_comparison.py  # Compares AI vs SUMO fidelity
-│   ├── dashboard_generator.py    # Generates publication figures
-│   ├── trajectory_analyzer.py    # Statistical metrics calculator
-│   └── extract_sumo_state.py     # Extracts SUMO simulation data
-├── configs/                      # SUMO configuration files
-│   ├── intersection.net.xml      # Road network definition
-│   └── calibrated.rou.xml        # Vehicle routes (generated)
-├── data/                         # Input data
-│   ├── input.mp4                 # Drone video footage
-│   └── gg.csv                    # Manual ground truth data
-├── models/                       # AI models
-│   └── yolov8n.pt               # YOLOv8 detection model
-├── outputs/                      # Generated results
-│   ├── traffic_data.json         # AI-detected vehicles
-│   ├── sumo_state.json          # SUMO simulation state
-│   ├── tripinfo.xml             # SUMO trip information
-│   └── dashboard/               # Publication-quality figures
-├── README.md                     # This file
-├── requirements.txt              # Python dependencies
-└── .gitignore                   # Git ignore rules
+DigitalTwin/
+├── configs/                         # SUMO network and route configuration files
+│   ├── version.net.xml              # SUMO road network definition
+│   └── empty.rou.xml                # Base empty route file template
+│
+├── data/                            # Input data
+│   ├── input.mp4                    # Source drone video of the intersection
+│   └── gg.csv                       # Ground truth vehicle counts (manual annotation)
+│
+├── experiments/                     # Experiment configuration
+│   ├── calibration_bayesopt.yaml    # Bayesian optimization hyperparameters
+│   └── rl_config.yaml               # Reinforcement learning training config
+│
+├── src/                             # Source code
+│   ├── app.py                       # Streamlit dashboard (main entry point)
+│   ├── traffic_master.py            # Master orchestrator for the full pipeline
+│   ├── comprehensive_comparison.py  # Validation: AI vs Ground Truth vs SUMO metrics
+│   ├── dashboard_generator.py       # Static plot generation (Matplotlib)
+│   ├── extract_sumo_state.py        # Extracts SUMO vehicle state via TraCI to JSON
+│   ├── traci_runner.py              # TraCI interface for running SUMO simulations
+│   ├── trajectory_analyzer.py       # Spatial trajectory RMSE analysis
+│   │
+│   ├── calibration/                 # Module 2: Bayesian physics calibration
+│   │   ├── objective.py             # Optuna objective function
+│   │   ├── optimizer.py             # Bayesian optimization runner
+│   │   ├── match_real_sim.py        # Real-to-simulated trajectory matching
+│   │   ├── metrics.py               # Spatial & temporal RMSE computation
+│   │   ├── evaluate_baseline.py     # Evaluates default SUMO physics
+│   │   ├── evaluate_optimized.py    # Evaluates calibrated SUMO physics
+│   │   ├── plots.py                 # Calibration visualization plots
+│   │   └── report.py                # LaTeX & CSV report generation
+│   │
+│   ├── control/                     # Module 3: Reinforcement Learning
+│   │   ├── env.py                   # Custom Gymnasium environment (SUMO + TraCI)
+│   │   ├── train.py                 # PPO training with fidelity constraint
+│   │   ├── train_baseline.py        # PPO training without fidelity (ablation)
+│   │   ├── evaluate.py              # Strategy benchmarking & emissions/safety
+│   │   └── ablation.py              # Sensitivity analysis across fidelity weights
+│   │
+│   └── experiments/                 # Scenario testing
+│       ├── generate_scenario_sumo_files.py  # Generates variant SUMO configs
+│       ├── scenario_runner.py       # Runs scenario simulations
+│       └── run_split_study.py       # Green-split timing study
+│
+├── outputs/                         # Generated outputs (after running the pipeline)
+│   ├── traffic_data.json            # AI-detected vehicle trajectories from video
+│   ├── sumo_state.json              # SUMO-simulated vehicle states
+│   ├── best_params.json             # Best calibrated Krauss parameters
+│   ├── calibrated.rou.xml           # Calibrated SUMO route file
+│   ├── rl_logs/                     # TensorBoard training logs & saved models
+│   ├── rl_logs_baseline/            # Baseline (unconstrained) training logs
+│   └── scenarios/                   # Scenario simulation configs & results
+│
+├── results/                         # Final evaluation metrics
+│   ├── evaluation_metrics.csv       # Strategy comparison (Delay, RMSE, CO2, Safety)
+│   ├── ablation_metrics.csv         # Fidelity weight sensitivity results
+│   ├── baseline_metrics_summary.csv # Default physics performance
+│   └── optimized_metrics_summary.csv# Calibrated physics performance
+│
+├── models/                          # Pre-trained model weights
+│   └── yolov8n.pt                   # YOLOv8 nano weights for vehicle detection
+│
+├── requirements.txt                 # Python dependencies
+├── README.md                        # This file
+└── .gitignore                       # Git ignore rules
 ```
 
-## Requirements
+---
 
-- Python 3.8+
-- SUMO (Simulation of Urban MObility)
-- Required Python packages (see `requirements.txt`)
+## Requirements & Installation
 
-## Installation
+### Prerequisites
+| Software | Version | Purpose |
+|----------|---------|---------|
+| Python | 3.8+ | Runtime |
+| SUMO | 1.18+ | Traffic microsimulation engine |
+| pip | Latest | Package management |
 
-1. **Install SUMO**
-   - Download from [https://sumo.dlr.de/](https://sumo.dlr.de/)
-   - Set `SUMO_HOME` environment variable
+> **Important:** SUMO must be installed and the `SUMO_HOME` environment variable must be set correctly on your system PATH. You can verify by running `sumo --version` in your terminal.
 
-2. **Install Python Dependencies**
+### Installation
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/hashiim0206/DigitalTwin.git
+   cd DigitalTwin
+   ```
+
+2. **Install Python Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-## Usage
-
-### Step 1: Detect Vehicles from Video
+### How to Run the Dashboard
+Launch the interactive Streamlit Command Center:
 ```bash
-cd src
-python traffic_master.py
+streamlit run src/app.py
 ```
-**Output**: `outputs/traffic_data.json` - Contains all detected vehicles with timing and routes
+A browser window will automatically open at `http://localhost:8501`.
 
-### Step 2: Run SUMO Simulation
-```bash
-python traci_runner.py
-```
-**Output**: SUMO GUI shows the simulation replicating the video traffic
+The dashboard contains five tabs:
+| Tab | Description |
+|-----|-------------|
+| **System Validation** | Compares AI detection vs Ground Truth vs SUMO (volume, turn accuracy, temporal distribution) |
+| **Microsimulation Tuning** | Displays Bayesian optimization convergence and calibrated physics parameters |
+| **AI Controller Optimization** | Live RL training curves (reward convergence, episode length) |
+| **Performance Analytics** | Strategy benchmarking — Delay, Fidelity RMSE, CO2 Emissions, Safety Conflicts |
+| **Sensitivity Analysis** | Ablation study showing the Delay vs Fidelity tradeoff across constraint weights |
 
-### Step 3: Validate Results
-```bash
-# Check AI detection accuracy
-python accuracy_checker.py
-
-# Compare digital twin fidelity
-python comprehensive_comparison.py
-```
-
-### Step 4: Generate Publication Figures
-```bash
-python dashboard_generator.py
-```
-**Output**: 
-- `outputs/dashboard/fig1_turn_comparison.png`
-- `outputs/dashboard/fig2_temporal_comparison.png`
-- `outputs/dashboard/fig3_summary_dashboard.png`
-- `outputs/dashboard/fig4_spacetime.png`
-
-## Key Results (Version 2.0)
-
-### Digital Twin Fidelity (Video AI vs SUMO)
-- **Volume Accuracy**: **100.0%** (279/279 vehicles matched)
-- **RMSE**: **0.000** vehicles/second (perfect temporal alignment)
-- **Turn Replication**: **100%** perfect match
-- **Space-Time Validation**: Verified with `fig4_spacetime.png`
-
-### AI Detection Quality (Video AI vs Ground Truth)
-- **Volume Accuracy**: **99.6%** (279/278 vehicles)
-- **Turn Detection**: **76-95%** accuracy per turn type
-    - Left Turns: ~94.8%
-    - Right Turns: ~82.0%
-    - Straight: ~76.1%
-
-
-## How It Works
-
-1. **Video Analysis**: YOLOv8 AI detects vehicles from drone footage
-2. **Route Generation**: Detected vehicles are converted to SUMO routes
-3. **Simulation**: SUMO replicates the traffic with exact timing
-4. **Validation**: Compares simulation against both AI detections and ground truth
-
-## Publication Figures
-
-Three figures are generated for academic papers:
-
-1. **Turn Comparison** - Shows AI accuracy vs digital twin fidelity
-2. **Temporal Distribution** - Time-series comparison with RMSE values
-3. **Summary Dashboard** - Comprehensive metrics overview
-
-All figures are 300 DPI, publication-ready PNG format.
-
-## Technical Details
-
-- **Video Duration**: 60 seconds (0-60s analysis window)
-- **Detection Model**: YOLOv8n (confidence threshold: 0.20)
-- **Simulation Steps**: 60 steps (1 step = 1 second)
-- **Traffic Light**: 3-phase signal with free right turns
-- **Coordinate System**: Custom calibration for video-to-SUMO mapping
-
-## Files Explained
-
-### Source Files
-- `traffic_master.py` - Detects vehicles, classifies movements, generates routes
-- `traci_runner.py` - Controls SUMO simulation via TraCI API
-- `accuracy_checker.py` - Validates AI detection against ground truth
-- `comprehensive_comparison.py` - Proves digital twin fidelity
-- `dashboard_generator.py` - Creates publication figures
-- `trajectory_analyzer.py` - Calculates RMSE and statistical metrics
-- `extract_sumo_state.py` - Extracts simulation data for comparison
-
-### Configuration Files
-- `intersection.net.xml` - Defines road network geometry
-- `calibrated.rou.xml` - Generated vehicle routes (created by traffic_master.py)
-
-### Data Files
-- `traffic_data.json` - AI-detected vehicles from video
-- `sumo_state.json` - SUMO simulation state (extracted from routes)
-- `tripinfo.xml` - SUMO trip completion data
-- `gg.csv` - Manual ground truth for validation
+---
 
 ## Troubleshooting
 
-**SUMO not found:**
-- Ensure `SUMO_HOME` environment variable is set
-- Verify SUMO is installed correctly
+| Issue | Solution |
+|-------|----------|
+| `ModuleNotFoundError: No module named 'comprehensive_comparison'` | Run `streamlit run src/app.py` from the **root** `DigitalTwin/` directory, not from inside `src/`. |
+| `ModuleNotFoundError: No module named 'traci'` | Ensure SUMO is installed and `SUMO_HOME` is set in your environment variables. |
+| Dashboard shows empty charts | Ensure the `outputs/` directory contains `traffic_data.json`, `sumo_state.json`, and the `results/` directory contains `evaluation_metrics.csv`. |
+| `FileNotFoundError` on `data/gg.csv` | The Ground Truth CSV must exist in the `data/` folder. This file is included in the repository. |
 
-**Installing dependencies:**
-```bash
-pip install ultralytics opencv-python numpy pandas matplotlib seaborn scipy
-```
-
-**Video file:**
-- Place your drone video as `data/input.mp4`
-- Or modify the path in `traffic_master.py`
+---
 
 ## Future Work
-
-- Real-time video processing for live traffic monitoring
-- Multi-sensor fusion combining cameras, LiDAR, and loop detectors
-- Automated signal phase detection using computer vision
-- Extend to corridor-level with multiple coordinated intersections
-- Transfer learning to deploy models across different intersection sites
-- Machine learning for short-term traffic prediction
-- Reinforcement learning for adaptive signal control
-
+*   **Multi-Modal Operations:** Injecting pedestrian crosswalks and priority bus lanes to test how the constrained AI handles real-world multi-modal constraints.
+*   **City-Wide Network Scaling:** Expanding from a single intersection to a multi-intersection grid, requiring cooperative multi-agent RL to manage macroscopic traffic waves.
+*   **Extended Compute Training:** Migrating the training pipeline to a High-Performance Computing (HPC) cluster (1,000,000+ timesteps) to drive the policy toward theoretical optimal limits.

@@ -10,36 +10,53 @@ NET_FILE = os.path.join(base_dir, 'configs', 'version.net.xml')
 DATA_FILE = os.path.join(base_dir, 'outputs', 'traffic_data.json')
 TLS_ID = "clusterJ1_J2_J4_J6"
 
-def setup_simulation():
+def setup_simulation(gui=True, car_params=None):
     """Starts SUMO and initializes environment types."""
-    # Ensure TraCI tools are found if SUMO_HOME is set
     if 'SUMO_HOME' in os.environ:
         tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
         sys.path.append(tools)
     
-    # Create a fresh empty route file to avoid pre-existing flow collisions
+    if car_params is None:
+        car_params = {"accel": "3.0", "decel": "4.5", "sigma": "0.5", "minGap": "2.5", "tau": "1.0", "maxSpeed": "70"}
+        
     empty_route = os.path.join(base_dir, 'configs', 'empty.rou.xml')
     with open(empty_route, "w") as f:
         f.write('<routes>\n')
-        f.write('    <vType id="car" accel="3.0" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="70"/>\n')
+        # Inject dynamic car parameters
+        vtype_str = f'    <vType id="car" accel="{car_params.get("accel", "3.0")}" ' \
+                    f'decel="{car_params.get("decel", "4.5")}" ' \
+                    f'sigma="{car_params.get("sigma", "0.5")}" ' \
+                    f'minGap="{car_params.get("minGap", "2.5")}" ' \
+                    f'tau="{car_params.get("tau", "1.0")}" ' \
+                    f'length="5" maxSpeed="{car_params.get("maxSpeed", "70")}"/>\n'
+        f.write(vtype_str)
         f.write('    <vType id="static_car" accel="1.0" decel="2.0" length="5" color="1,0,0"/>\n')
         f.write('</routes>')
 
-    # Launch SUMO-GUI with EMPTY routes and generate trip statistics
     tripinfo_path = os.path.join(base_dir, 'outputs', 'tripinfo.xml')
+    fcd_path = os.path.join(base_dir, 'outputs', 'fcd.xml')
+    
+    if gui:
+        sumo_exe = "sumo-gui"
+        delay = "200"
+    else:
+        sumo_exe = "sumo"
+        delay = "0"
+        
     sumo_cmd = [
-        "sumo-gui", "-n", NET_FILE, "-r", empty_route, 
-        "--start", "--no-warnings", "--delay", "200",
-        "--tripinfo-output", tripinfo_path
+        sumo_exe, "-n", NET_FILE, "-r", empty_route, 
+        "--start", "--no-warnings", "--delay", delay,
+        "--tripinfo-output", tripinfo_path,
+        "--fcd-output", fcd_path
     ]
     
-    print(f"--- Digital Twin Sync ---\nLaunching SUMO with 384 pre-loaded routes and 200ms delay...")
+    print(f"--- Digital Twin Sync ---\nLaunching {sumo_exe} with params {car_params}...")
     traci.start(sumo_cmd)
     print("Connection established with TraCI.")
 
-def run_sync():
+def run_sync(gui=True, car_params=None):
     try:
-        setup_simulation()
+        setup_simulation(gui=gui, car_params=car_params)
         
         # Load the 252 detected vehicles from input.mp4
         with open(DATA_FILE, 'r') as f:

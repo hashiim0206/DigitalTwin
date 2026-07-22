@@ -1,0 +1,2 @@
+Experiment,Vehicles Evaluated,Median Spatial RMSE (norm),95th Pctl RMSE (norm),Median Timing Deviation,Lane Agreement Rate
+Baseline (Krauss Defaults),118,0.704,0.8937,0.1856,1.0

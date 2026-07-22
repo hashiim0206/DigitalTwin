@@ -1,0 +1,2 @@
+Experiment,Vehicles Evaluated,Median Spatial RMSE (norm),95th Pctl RMSE (norm),Median Timing Deviation,Lane Agreement Rate
+Bayesian Optimized,100,0.675,0.8752,0.1819,1.0

@@ -12,6 +12,7 @@ import numpy as np
 import os
 import sys
 import json
+import scipy.ndimage as nd
 
 # Add parent directory to path to import comprehensive_comparison
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -130,21 +131,22 @@ class DashboardGenerator:
         
         count_with_pos = 0
         for veh in self.video_ai:
-            color = '#2E86AB' # Default (North/South)
-            if veh.get('origin') in ['east', 'west'] or veh.get('dest') in ['east', 'west']:
-                color = '#A23B72' # East/West
+            # Only plot North-South straight traffic to avoid horizontal/curved artifacts from turning/EW traffic
+            is_ns_straight = (veh.get('origin') in ['NORTH', 'SOUTH'] and veh.get('dest') in ['NORTH', 'SOUTH'])
             
-            if 'positions' in veh and len(veh['positions']) > 1:
+            # Require at least 30 frames (1 second) to filter out scattered noise fragments
+            if is_ns_straight and 'positions' in veh and len(veh['positions']) > 30:
                 count_with_pos += 1
-                # Plot full trajectory
                 pts = veh['positions']
-                # X = Time, Y = Y-coord
-                fps = 30.0 # Assume 30
+                fps = 30.0
                 start_t = veh['depart']
                 times = [start_t + i/fps for i in range(len(pts))]
-                ys = [p[1] for p in pts] # Usage Y coordinate as distance
+                raw_ys = [p[1] for p in pts] 
                 
-                ax.plot(times, ys, color=color, alpha=0.5, linewidth=1.5)
+                # Apply very strong Gaussian filter to eliminate bounding-box jitter
+                ys = nd.gaussian_filter1d(raw_ys, sigma=5)
+                
+                ax.plot(times, ys, color='#2E86AB', alpha=0.6, linewidth=1.5)
             else:
                  # Fallback: Plot simple line from Start Y to End Y
                  # This ensures SOMETHING shows up even if positions are missing
@@ -160,9 +162,8 @@ class DashboardGenerator:
         
         # Legend
         from matplotlib.lines import Line2D
-        custom_lines = [Line2D([0], [0], color='#2E86AB', lw=2),
-                        Line2D([0], [0], color='#A23B72', lw=2)]
-        ax.legend(custom_lines, ['North-South Flow', 'East-West Flow'])
+        custom_lines = [Line2D([0], [0], color='#2E86AB', lw=2)]
+        ax.legend(custom_lines, ['North-South Flow (Straight)'])
         
         plt.tight_layout()
         plt.savefig(os.path.join(self.output_dir, 'fig4_spacetime.png'), bbox_inches='tight')
@@ -328,6 +329,7 @@ class DashboardGenerator:
         ax4.set_ylabel('Total Vehicles', fontweight='bold')
         ax4.set_title('Volume Comparison (0-60s window)', fontweight='bold', pad=15)
         ax4.grid(True, alpha=0.3, axis='y')
+        ax4.set_ylim(0, max(values) * 1.20) # Add 20% headroom to prevent label overlap
         
         for bar, val in zip(bars, values):
             height = bar.get_height()

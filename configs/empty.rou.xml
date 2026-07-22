@@ -1,4 +1,4 @@
 <routes>
-    <vType id="car" accel="3.0" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="70"/>
+    <vType id="car" accel="2.145315278261032" decel="2.1093936757606735" sigma="0.7376673311081843" minGap="4.4925177381112835" tau="1.9907767737441109" length="5" maxSpeed="70"/>
     <vType id="static_car" accel="1.0" decel="2.0" length="5" color="1,0,0"/>
 </routes>

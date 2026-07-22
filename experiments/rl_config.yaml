@@ -1,0 +1,25 @@
+# rl_config.yaml
+# Hyperparameters for Stable-Baselines3 PPO Agent
+
+agent:
+  algorithm: "PPO"
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+
+environment:
+  max_steps: 60      # Matches the 60s baseline video window
+  action_step: 5.0   # Agent chooses a phase every 5 seconds
+  w_delay: 1.0       # Weight for minimizing queue length
+  w_fidelity: 5.0    # Weight for minimizing spatial RMSE (the paper's novelty)
+
+environment_baseline:
+  max_steps: 60
+  action_step: 5.0
+  w_delay: 1.0
+  w_fidelity: 0.0    # Standard RL agent: zero penalty for fidelity divergence
