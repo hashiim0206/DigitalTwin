@@ -150,6 +150,44 @@ The dashboard contains five tabs:
 
 ---
 
+## Full Pipeline Execution (Re-running from Scratch)
+
+If you wish to re-train the AI agent, re-run Bayesian optimization, or generate brand-new simulation results from scratch, execute the following steps in sequence:
+
+1. **Module 1: Video Trajectory Extraction**
+   ```bash
+   python src/traffic_master.py
+   ```
+   *Processes raw drone video (`data/input.mp4`) using YOLOv8 + Kalman Filtering to extract vehicle coordinates and turn types. Generates `outputs/traffic_data.json`.*
+
+2. **Module 2: Microsimulation Physics Calibration**
+   ```bash
+   python src/calibration/optimizer.py
+   ```
+   *Runs 50 Optuna Bayesian Optimization trials in SUMO to calibrate driver physics parameters (`tau`, `accel`, `decel`, `minGap`, `sigma`). Generates `outputs/best_params.json` and `outputs/sumo_state.json`.*
+
+3. **Module 3: AI Controller Training**
+   ```bash
+   python src/control/train.py
+   ```
+   *Trains the PPO Reinforcement Learning agent inside the calibrated Digital Twin using the Spatial RMSE fidelity penalty. Generates `outputs/rl_logs/final_ppo_model.zip` and `outputs/rl_logs/evaluations.npz`.*
+
+4. **Module 4: Baseline Strategy Benchmarking**
+   ```bash
+   python src/control/evaluate.py
+   ```
+   *Evaluates the AI agent against Fixed-Time, Max-Pressure, and Baseline RL across Delay, Fidelity RMSE, HBEFA CO2 Emissions, and Safety Conflicts. Generates `results/evaluation_metrics.csv`.*
+
+5. **Module 5: Sensitivity & Ablation Study**
+   ```bash
+   python src/control/ablation.py
+   ```
+   *Evaluates trade-offs across varying constraint weights (`w_fidelity`). Generates `results/ablation_metrics.csv`.*
+
+After running the pipeline, launch the dashboard (`streamlit run src/app.py`) to visualize the newly generated metrics!
+
+---
+
 ## Troubleshooting
 
 | Issue | Solution |
